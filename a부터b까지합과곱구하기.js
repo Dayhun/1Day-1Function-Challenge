@@ -18,7 +18,7 @@ function multiAll(a, b) {
 }
 
 //2부터 4까지의 합과 곱 출력하기
-console.log(sumAll(2, 4));
-console.log(multiAll(2, 4));
+console.log(`2부터 4까지의 합은 ${sumAll(2, 4)}입니다.`);
+console.log(`2부터 4까지의 곱은 ${multiAll(2, 4)}입니다.`);
 
 
