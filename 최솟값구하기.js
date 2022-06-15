@@ -1,3 +1,4 @@
+// 배열 최솟값 구하기
 function min(array) {
     let output = array[0];
     for (const item of array) {
