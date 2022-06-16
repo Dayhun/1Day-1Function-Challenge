@@ -1,4 +1,4 @@
-// product 할당부분은 복붙해놓고 시작~ 
+// product
 let products = [
     { id: 0, price: 70000, title: 'Blossom Dress' },
     { id: 1, price: 32000, title: 'Check Shirt' },
