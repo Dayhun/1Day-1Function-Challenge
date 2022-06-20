@@ -14,12 +14,11 @@
 
     <script>
         let count = 5; 
-        let timer = setInterval(function () {
+        setInterval(function () {
             count --;
             if (count >= 0) { 
                 document.querySelector("#num").textContent = count; 
             } else { 
-                clearTimeout(timer);
                 document.querySelector("#alert").style.display = "none"; 
             }
         }, 1000);
