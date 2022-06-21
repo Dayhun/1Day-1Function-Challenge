@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+</head>
+
+<body>
+    <p>태조 이성계가 태어난 연도는?</p>
+    <input type="text" id="answer" />
+    <button id="send-answer" type="submit">제출</button>
+  
+    <script>
+      const answerBtn = document.querySelector('#send-answer');
+      let count = 0;
+      answerBtn.addEventListener('click', function () {
+        const answer = document.querySelector('#answer').value;
+        // 정답 alert, 오답인 경우 count 1증가
+        if (answer == 1335) {
+            alert('정답~');
+        } else {
+            count++;
+        }
+        // 오답 alert
+        if(answer != 1335 && count<3){
+            alert(`땡! ${count}번 틀렸습니다.`);
+        } else if (answer != 1335 && count >=3){
+            alert('3번이상 틀리셨습니다.');
+        }
+      });
+    </script>
+  </body>
+
+</html>
