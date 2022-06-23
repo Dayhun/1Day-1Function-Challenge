@@ -15,9 +15,9 @@ for (let i = 1; i <= level; i++) {
 
 
 // 방법2_제로초님 코드
-const level = 5;
-for (let i = 1; i <= level; i++) {
-    console.log(" ".repeat(level - i) + "*".repeat(2 * i - 1));
+const level2 = 5;
+for (let i = 1; i <= level2; i++) {
+    console.log(" ".repeat(level2 - i) + "*".repeat(2 * i - 1));
 }
 
 
