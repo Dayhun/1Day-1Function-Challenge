@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carosel</title>
+    <link rel="stylesheet" href="carosel.css" />
+</head>
+
+<body>
+    <div style="overflow: hidden">
+        <div class="slide-container">
+            <div class="slide-box"><img src="car1.png" alt="" /></div>
+            <div class="slide-box"><img src="car2.png" alt="" /></div>
+            <div class="slide-box"><img src="car3.png" alt="" /></div>
+        </div>
+    </div>
+
+    <button class="previous">이전</button>
+    <button class="next">다음</button>
+
+
+    <script>
+        //1번그림좌표 translateX(0vw)
+        //2번그림좌표 translateX(-100vw)
+        //3번그림좌표 translateX(-200vh)
+
+        const slide = document.querySelector('.slide-container');
+        const previousBtn = document.querySelector('.previous');
+        const nextBtn = document.querySelector('.next');
+
+        let currentImg = 1;
+
+        nextBtn.addEventListener('click', function () {
+            if (currentImg >= 3) {
+                slide.style.transform = 'translateX(-200vh)';
+            } else {
+                slide.style.transform = `translateX(-${currentImg}00vw)`;
+                currentImg++;
+            }
+        });
+
+        previousBtn.addEventListener('click', function () {
+            slide.style.transform = `translateX(-${currentImg - 2}00vw)`;
+            currentImg--;
+        });
+    </script>
+
+</body>
+
+</html>
