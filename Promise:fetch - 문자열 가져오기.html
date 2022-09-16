@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // https://codingapple1.github.io/hello.txt
+
+        let getText = new Promise((resolve, reject) => {
+            fetch('https://codingapple1.github.io/hello.txt')
+                // 가져오려는 파일이 text파일의 문자열이기 때문에 json()형태로 변환
+                // 해주는게 아닌 text()형태로 변환해줘야합니다!!! 이건몰랐징?
+                .then((res) => res.text())
+                .then((data) => resolve(data));
+        });
+
+        getText.then(function (data) {
+            console.log(data);
+        });
+    </script>
+</body>
+
+</html>
